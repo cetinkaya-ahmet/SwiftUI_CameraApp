@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct CameraAppApp: App {
+    @StateObject
+    private var dataModel = DataModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView(content: {
+                CameraScreen()
+                    
+            })
+            
+            .environmentObject(dataModel)
+            
         }
     }
 }

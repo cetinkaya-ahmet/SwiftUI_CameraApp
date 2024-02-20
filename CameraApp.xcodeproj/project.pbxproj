@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		7E89D25D2B8397B700BF456C /* CameraAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89D25C2B8397B700BF456C /* CameraAppApp.swift */; };
-		7E89D25F2B8397B700BF456C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89D25E2B8397B700BF456C /* ContentView.swift */; };
 		7E89D2612B8397B900BF456C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E89D2602B8397B900BF456C /* Assets.xcassets */; };
 		7E89D2642B8397B900BF456C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E89D2632B8397B900BF456C /* Preview Assets.xcassets */; };
 		7E89D26E2B8397BA00BF456C /* CameraAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89D26D2B8397BA00BF456C /* CameraAppTests.swift */; };
 		7E89D2782B8397BA00BF456C /* CameraAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89D2772B8397BA00BF456C /* CameraAppUITests.swift */; };
 		7E89D27A2B8397BA00BF456C /* CameraAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89D2792B8397BA00BF456C /* CameraAppUITestsLaunchTests.swift */; };
+		7E89D2872B83980A00BF456C /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89D2862B83980A00BF456C /* CameraScreen.swift */; };
+		7E89D2892B8398F500BF456C /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89D2882B8398F500BF456C /* ImagePickerView.swift */; };
+		7E89D28B2B83990500BF456C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89D28A2B83990500BF456C /* Coordinator.swift */; };
+		7E89D28D2B839A2B00BF456C /* GalleryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89D28C2B839A2B00BF456C /* GalleryScreen.swift */; };
+		7E89D28F2B839A5F00BF456C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89D28E2B839A5F00BF456C /* Item.swift */; };
+		7E89D2912B839ACD00BF456C /* GridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89D2902B839ACD00BF456C /* GridItemView.swift */; };
+		7E89D2932B839B0E00BF456C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89D2922B839B0E00BF456C /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,6 @@
 /* Begin PBXFileReference section */
 		7E89D2592B8397B700BF456C /* CameraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E89D25C2B8397B700BF456C /* CameraAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAppApp.swift; sourceTree = "<group>"; };
-		7E89D25E2B8397B700BF456C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7E89D2602B8397B900BF456C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E89D2632B8397B900BF456C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7E89D2692B8397BA00BF456C /* CameraAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +49,14 @@
 		7E89D2732B8397BA00BF456C /* CameraAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E89D2772B8397BA00BF456C /* CameraAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAppUITests.swift; sourceTree = "<group>"; };
 		7E89D2792B8397BA00BF456C /* CameraAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7E89D2862B83980A00BF456C /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
+		7E89D2882B8398F500BF456C /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		7E89D28A2B83990500BF456C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		7E89D28C2B839A2B00BF456C /* GalleryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreen.swift; sourceTree = "<group>"; };
+		7E89D28E2B839A5F00BF456C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		7E89D2902B839ACD00BF456C /* GridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemView.swift; sourceTree = "<group>"; };
+		7E89D2922B839B0E00BF456C /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		7E89D2942B839C9E00BF456C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +107,16 @@
 		7E89D25B2B8397B700BF456C /* CameraApp */ = {
 			isa = PBXGroup;
 			children = (
+				7E89D2952B83A31400BF456C /* MediaPicker */,
+				7E89D2942B839C9E00BF456C /* Info.plist */,
 				7E89D25C2B8397B700BF456C /* CameraAppApp.swift */,
-				7E89D25E2B8397B700BF456C /* ContentView.swift */,
 				7E89D2602B8397B900BF456C /* Assets.xcassets */,
 				7E89D2622B8397B900BF456C /* Preview Content */,
+				7E89D2862B83980A00BF456C /* CameraScreen.swift */,
+				7E89D28C2B839A2B00BF456C /* GalleryScreen.swift */,
+				7E89D28E2B839A5F00BF456C /* Item.swift */,
+				7E89D2902B839ACD00BF456C /* GridItemView.swift */,
+				7E89D2922B839B0E00BF456C /* DataModel.swift */,
 			);
 			path = CameraApp;
 			sourceTree = "<group>";
@@ -125,6 +144,15 @@
 				7E89D2792B8397BA00BF456C /* CameraAppUITestsLaunchTests.swift */,
 			);
 			path = CameraAppUITests;
+			sourceTree = "<group>";
+		};
+		7E89D2952B83A31400BF456C /* MediaPicker */ = {
+			isa = PBXGroup;
+			children = (
+				7E89D28A2B83990500BF456C /* Coordinator.swift */,
+				7E89D2882B8398F500BF456C /* ImagePickerView.swift */,
+			);
+			path = MediaPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +285,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E89D25F2B8397B700BF456C /* ContentView.swift in Sources */,
+				7E89D28D2B839A2B00BF456C /* GalleryScreen.swift in Sources */,
+				7E89D2892B8398F500BF456C /* ImagePickerView.swift in Sources */,
+				7E89D28B2B83990500BF456C /* Coordinator.swift in Sources */,
+				7E89D28F2B839A5F00BF456C /* Item.swift in Sources */,
+				7E89D2912B839ACD00BF456C /* GridItemView.swift in Sources */,
+				7E89D2872B83980A00BF456C /* CameraScreen.swift in Sources */,
 				7E89D25D2B8397B700BF456C /* CameraAppApp.swift in Sources */,
+				7E89D2932B839B0E00BF456C /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,9 +456,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CameraApp/Preview Content\"";
-				DEVELOPMENT_TEAM = DA4LKQLVG5;
+				DEVELOPMENT_TEAM = T66S44XPZ4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CameraApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need Camera Permission";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -451,9 +487,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CameraApp/Preview Content\"";
-				DEVELOPMENT_TEAM = DA4LKQLVG5;
+				DEVELOPMENT_TEAM = T66S44XPZ4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CameraApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need Camera Permission";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
