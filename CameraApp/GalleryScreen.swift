@@ -10,10 +10,7 @@ import SwiftUI
 struct GalleryScreen: View {
     @EnvironmentObject var dataModel: DataModel
     private static let initialColumns = 4
-    @State private var photoDetailItem : Item? = nil
-
     @State private var gridColumns = Array(repeating: GridItem(.flexible()), count: initialColumns)
-    @State private var numColumns = initialColumns
     @Environment(\.dismiss) var dismiss
     
     private var columnsTitle: String {
@@ -48,7 +45,7 @@ struct GalleryScreen: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden()
         .navigationBarItems(leading: NavBackButton(dismiss: self.dismiss))
-        .toolbarBackground(Color.orange, for: .navigationBar)
+        .toolbarBackground(Color.blue, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .principal) {
@@ -64,7 +61,6 @@ struct GalleryScreen: View {
 
 struct NavBackButton: View {
     let dismiss: DismissAction
-    
     var body: some View {
         Button {
             dismiss()

@@ -26,11 +26,11 @@ struct ImagePickerView: UIViewControllerRepresentable {
         let screenSize = UIScreen.main.bounds
         let screenHeight = screenSize.height
         let screenWidth = screenSize.width
-         let cameraAspectRatio: CGFloat = 4.0 / 3.0
-         let imageHeight = screenWidth * cameraAspectRatio
-         let scale = ceil((screenHeight / imageHeight) * 10.0) / 10.0
-         var transform = CGAffineTransform(translationX: 0, y: (screenHeight - imageHeight) / 2)
-         transform = transform.scaledBy(x: scale, y: scale)
+        let cameraAspectRatio: CGFloat = 4.0 / 3.0
+        let imageHeight = screenWidth * cameraAspectRatio
+        let scale = ceil((screenHeight / imageHeight) * 10.0) / 10.0
+        var transform = CGAffineTransform(translationX: 0, y: (screenHeight - imageHeight) / 2)
+        transform = transform.scaledBy(x: scale, y: scale)
         imagePicker.cameraViewTransform = transform
         return imagePicker
     }
@@ -44,7 +44,7 @@ struct ImagePickerView: UIViewControllerRepresentable {
         }else{
             uiViewController.cameraFlashMode = .off
         }
-        if(cameraDevice == 0){
+        if(cameraDevice == Camera.Rear.rawValue){
             uiViewController.cameraDevice = .rear
         }else{
             uiViewController.cameraDevice = .front

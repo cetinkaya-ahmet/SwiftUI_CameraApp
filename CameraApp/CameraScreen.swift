@@ -10,14 +10,11 @@ import SwiftUI
 
 struct CameraScreen: View {
     @State private var capturedImage: UIImage?
-    @State private var signedImage: UIImage?
     @State private var showCapturedImage = false
     @State private var didTapCapture: Bool? = false
     @State private var flash: Bool = false
-    @State private var cameraDevice: Int = 0 // 0 -> Rear 1 -> front
+    @State private var cameraDevice: Int = Camera.Rear.rawValue
     @ObservedObject var dataModel: DataModel = DataModel()
-    @State private var showingPurchaseScreen = false
-    @State private var needToForceUpdate = false
     
     var body: some View {
         VStack{
@@ -36,15 +33,18 @@ struct CameraScreen: View {
                             .onTapGesture {
                                 flash.toggle()
                             }
+                        
+                        Spacer()
+                        
                     }
                     .padding()
                     .padding(.top, 48)
                     .padding(.horizontal, 8)
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height*0.1)
-                    .background(Color.orange.opacity(0.70))
-                    
+                    .background(Color.blue.opacity(0.70))
                     
                     Spacer()
+                    
                     HStack{
                         NavigationLink(destination: GalleryScreen()){
                             if(capturedImage != nil){
@@ -84,26 +84,17 @@ struct CameraScreen: View {
                                 didTapCapture = false
                             }
                        } label: {
-                           Label {} icon: {
-                               ZStack {
-                                   Circle()
-                                       .strokeBorder(.white, lineWidth: 2)
-                                       .frame(width: 72, height: 72)
-                                   Circle()
-                                       .fill(Color.white)
-                                       .frame(width: 60, height: 60)
-                               }
+                           ZStack {
+                               Circle()
+                                   .fill(self.didTapCapture ?? false ? .red : Color.white)
+                                   .frame(width: 60, height: 60)
                            }
                        }
                         Spacer()
-                        
                         Button {
-                            if(cameraDevice == 0){ cameraDevice = 1} else{cameraDevice = 0}
+                            if(cameraDevice == Camera.Rear.rawValue){ cameraDevice = Camera.Front.rawValue} else{ cameraDevice = Camera.Rear.rawValue }
                         } label: {
                             ZStack(alignment: .center) {
-                                Circle()
-                                    .fill(Color("Gray").opacity(0.5))
-                                    .frame(width: 48, height: 48)
                                 Image(systemName: "arrow.triangle.2.circlepath.camera")
                                     .foregroundColor(.white)
                             }.frame(width: 60, height: 60)
@@ -111,8 +102,7 @@ struct CameraScreen: View {
                     }
                     .padding()
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/6)
-                    .background(Color.orange.opacity(0.70))
-                    
+                    .background(Color.blue.opacity(0.70))
                 }
             )
         }
@@ -121,15 +111,12 @@ struct CameraScreen: View {
                 showCapturedImage = true
             }
         }
-       
         .onAppear(perform: {
             dataModel.getItems()
-
         })
         .ignoresSafeArea()
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden()
-                
     }
 }
 
@@ -137,4 +124,9 @@ struct CameraScreen_Previews: PreviewProvider {
     static var previews: some View {
         CameraScreen()
     }
+}
+
+enum Camera : Int {
+    case Rear = 0
+    case Front = 1
 }
